@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cannonball</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="/stylesheets/normalize.css">
+  <link rel="stylesheet" href="/stylesheets/cannonball.css">
+  <link rel="icon" href="/images/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="/images/touch-icon.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/images/touch-icon-ipad.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/images/touch-icon-iphone-retina.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/images/touch-icon-ipad-retina.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="app">
+  <meta name="twitter:site" content="@cannonballapp">
+  <meta name="twitter:app:id:iphone" content="965641009">
+  <meta name="twitter:app:id:android" content="io.fabric.samples.cannonball">
+  <meta name="twitter:description" content="Cannonball is the fun way to create and share stories and poems on your phone.">
+  <meta name="twitter:creator" content="@romainhuet">
+  <meta name="twitter:image" content="/images/cannonball-logo.png">
+  <meta name="og:title" content="Cannonball">
+  <meta name="og:description" content="Cannonball is the fun way to create and share stories and poems on your phone.">
+  <meta name="og:image" content="/images/cannonball-logo.png">
+</head>
+<body>
+  <div class="container">
+    <main>
+      <section class="cannonball">
+        <header>
+          <h1 class="logo bounce"><a href="/">Cannonball</a></h1>
+          <h2><%= error.status %> <%= message %></h2>
+        </header>
+        <pre><%= error.stack %></pre>
+      </section>
+    </main>
+  </div>
+  <footer>
+    <p>Cannonball was created to demo <a href="https://digits.com/">Digits</a> and <a href="https://get.fabric.io/">Fabric</a>, the easiest way to build the best apps.</p>
+    <p>Get started with Fabric by learning how we built this app with our <a href="http://docs.fabric.io/ios/examples/cannonball/"> Cannonball iOS Tutorial</a> and <a href="http://docs.fabric.io/android/examples/cannonball/">Cannonball Android Tutorial</a>.
+    <p class="copyright">© 2015 Twitter, Inc.</p>
+  </footer>
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script id="digits-sdk" src="https://cdn.digits.com/1/sdk.js" async></script>
+  <script src="/javascripts/cannonball.js"></script>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</body>
+</html>

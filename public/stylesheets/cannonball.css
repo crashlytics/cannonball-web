@@ -1,0 +1,268 @@
+/**
+ * Cannonball Web Stylesheet.
+ * Romain Huet
+ * @romainhuet
+ */
+
+body {
+  background: #00a69b;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 14px;
+  color: #00a69b;
+  text-align: center;
+  border-top: 3px solid #00a69b;
+  border-bottom: 3px solid #00a69b;
+}
+
+p {
+  font-size: 16px;
+  margin: 0 10px;
+  padding: 0 0 5px;
+}
+
+a {
+  color: #00a69b;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+main {
+  margin: 0 auto;
+  max-width: 1000px;
+  height: 640px;
+  background: url(/images/cannonball-iphone-artwork.png) right center no-repeat;
+  background-size: 586px 640px;
+}
+
+header {
+  padding-top: 50px;
+}
+
+h1 {
+  margin: 10px 0;
+  font-size: 24px;
+}
+
+h1 a {
+  display: block;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  background: url(/images/cannonball-logo.png) top center no-repeat;
+  background-size: 200px 200px;
+  text-indent: -9999px;
+  font-size: 0;
+}
+
+h2 {
+  margin: 10px 10px 20px;
+  font-family: "Gotham-Medium", "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.container {
+  background: #ffedd3;
+}
+
+.cannonball {
+  width: 40%;
+}
+
+.digits {
+  height: 200px;
+}
+
+.digits-button {
+  width: 320px;
+  margin: 30px auto 0;
+  font-family: "Gotham-Medium", "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 24px;
+  background: transparent;
+  color: #00a69b;
+  padding: 15px 20px 15px 60px;
+  border: 3px solid #00a69b;
+  border-radius: 5px;
+  cursor: pointer;
+  background: url(/images/digits-icon.png) 20px center no-repeat;
+  background-size: 30px 35px;
+}
+
+.digits-button:focus,
+.digits-button:active {
+  outline: none;
+  border: 3px solid #00a69b;
+}
+
+.digits-phone-number.shown {
+  opacity: 1;
+}
+
+.digits-note {
+  margin-top: 20px;
+  font-size: 12px;
+}
+
+.stores {
+  font-size: 0;
+}
+
+.stores a {
+  display: inline-block;
+  width: 148px;
+  height: 50px;
+  margin: 0 10px;
+  text-indent: -9999px;
+  background-size: 148px 50px;
+}
+
+.stores a.app-store {
+  background-image: url(/images/app-store.png);
+}
+
+.stores a.play-store {
+  background-image: url(/images/play-store.png);
+}
+
+.about {
+  padding: 20px 0;
+  background: #00a69b;
+  color: #ffedd3;
+}
+
+.about a {
+  font-weight: bold;
+  color: #ffedd3;
+}
+
+.cannonball-ios,
+.cannonball-android {
+  display: inline-block;
+  width: 300px;
+  margin: 30px 10px 10px;
+  vertical-align: middle;
+}
+
+.cannonball-ios {
+  height: 615px;
+  background: url(/images/cannonball-ios.png) top center no-repeat;
+  background-size: 300px 615px;
+}
+
+.cannonball-android {
+  height: 589px;
+  background: url(/images/cannonball-android.png) top center no-repeat;
+  background-size: 300px 589px;
+}
+
+.twitter {
+  padding: 20px;
+}
+
+.twitter-timeline {
+  display: block;
+  width: 400px !important;
+  height: 600px !important;
+  margin: 20px auto !important;
+}
+
+.twitter-follow-button {
+  margin-top: 10px;
+}
+
+footer {
+  padding: 10px;
+  background: #00a69b;
+  color: #ffedd3;
+}
+
+footer p {
+  font-size: 12px;
+  padding: 0;
+}
+
+/* Animations */
+
+@keyframes bounce {
+  0%, 60%, 75%, 90%, 100% {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -3000px, 0);
+  }
+  60% {
+    opacity: 1;
+    transform: translate3d(0, 25px, 0);
+  }
+  75% {
+    transform: translate3d(0, -10px, 0);
+  }
+  90% {
+    transform: translate3d(0, 5px, 0);
+  }
+  100% {
+    transform: none;
+  }
+}
+
+.bounce {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-name: bounce;
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 960px) {
+  main {
+    max-width: auto;
+    height: auto;
+    background: none;
+  }
+
+  header {
+    padding-top: 10px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  h1 a {
+    width: 125px;
+    height: 125px;
+    background-size: 125px 125px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .cannonball {
+    width: 100%;
+  }
+
+  .digits, .stores {
+    height: auto;
+    margin: 20px 0;
+  }
+
+  .digits-button {
+    margin: auto;
+  }
+
+  .twitter {
+    padding: 0;
+  }
+
+  .twitter p {
+    padding-bottom: 10px;
+  }
+}
