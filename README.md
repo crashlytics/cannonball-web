@@ -2,6 +2,8 @@
 
 This repository contains the source code for the simple website presenting [Cannonball](http://cannonballapp.io/) and featuring an end-to-end [Digits](https://get.fabric.io/) Web Demo built in JavaScript and Node.
 
+![Screenshot of Cannonball for Web](screenshot.png "Screenshot of Cannonball for Web")
+
 ## About Cannonball
 
 Cannonball is a canonical sample iOS and Android app to demonstrate how to use [Fabric](https://get.fabric.io/), the easiest way to build the best apps.
