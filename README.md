@@ -14,11 +14,13 @@ Cannonball is open source, so feel free to take a look at the code of [Cannonbal
 
 ## Digits Highlights
 
-If you’re looking for an example of how to use Digits in your Web application, there are two files in this project that are particularly interesting.
+If you’re looking for an example of how to use Digits in your Web application, there are two files in this project that are particularly interesting:
 
-On the frontend, [public/javascripts/cannonball.js](https://github.com/twitterdev/cannonball-web/blob/master/public/javascripts/cannonball.js) is where the implementation lives for our implementation of the Digits JavaScript SDK on the Cannonball page. It initializes the Digits SDK in the browser with the consumer key, triggers the Digits login flow when the user starts to interact with the “Sign In with Phone button”, performs a request to the backend passing the right OAuth Echo headers, and eventually displays the phone number.
+* On the client, [`public/javascripts/cannonball.js`](https://github.com/twitterdev/cannonball-web/blob/master/public/javascripts/cannonball.js) contains our implementation of the Digits JavaScript SDK for the Cannonball page. It initializes the Digits SDK in the browser with the consumer key, triggers the Digits login flow when the user starts to interact with the “Sign In with Phone” button, performs a request to the backend passing the right OAuth Echo headers and eventually displays the phone number.
 
-On the backend, [routes/index.js](https://github.com/twitterdev/cannonball-web/blob/master/routes/index.js) is responsible for verifying the authentication and interacting with the Digits API. When the login is successful, the Digits API will return the user information, and this route file passes some JSON data back to the frontend to display the verified phone number.
+* On the server, [`routes/index.js`](https://github.com/twitterdev/cannonball-web/blob/master/routes/index.js) is responsible for verifying the authentication and interacting with the Digits API. When the login is successful, the Digits API will return the user information, and this route file returns a JSON object back to the frontend to display the verified phone number.
+
+Note: In this Cannonball Web demo, we simply display on the page the phone number returned over JSON, but for your application, you would typically store the Digits user ID and verified phone number in your database to enrich your user profile.
 
 ## Setup
 
