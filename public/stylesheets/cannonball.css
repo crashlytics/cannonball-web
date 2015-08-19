@@ -37,11 +37,11 @@ main {
 }
 
 header {
-  padding-top: 50px;
+  padding-top: 30px;
 }
 
 h1 {
-  margin: 10px 0;
+  margin: 10px 0 20px;
   font-size: 24px;
 }
 
@@ -60,7 +60,7 @@ h2 {
   margin: 10px 10px 20px;
   font-family: "Gotham-Medium", "Helvetica Neue", Helvetica, sans-serif;
   font-size: 18px;
-  font-weight: normal;
+  font-weight: 500;
 }
 
 .container {
@@ -71,15 +71,12 @@ h2 {
   width: 40%;
 }
 
-.digits {
-  height: 200px;
-}
-
 .digits-button {
   width: 320px;
   margin: 30px auto 0;
   font-family: "Gotham-Medium", "Helvetica Neue", Helvetica, sans-serif;
   font-size: 24px;
+  font-weight: 500;
   background: transparent;
   color: #00a69b;
   padding: 15px 20px 15px 60px;
@@ -88,6 +85,11 @@ h2 {
   cursor: pointer;
   background: url(/images/digits-icon.png) 20px center no-repeat;
   background-size: 30px 35px;
+  transition: box-shadow 0.3s;
+}
+
+.digits-button:not(:disabled):hover {
+  box-shadow: 0 0 5px #00a69b;
 }
 
 .digits-button:focus,
@@ -102,10 +104,12 @@ h2 {
 
 .digits-note {
   margin-top: 20px;
-  font-size: 12px;
+  font-size: 13px;
+  line-height: 16px;
 }
 
 .stores {
+  margin-top: 45px;
   font-size: 0;
 }
 
@@ -183,7 +187,34 @@ footer p {
   padding: 0;
 }
 
+footer p a {
+  color: #ffedd3;
+}
+
 /* Animations */
+
+@-webkit-keyframes bounce {
+  0%, 60%, 75%, 90%, 100% {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -3000px, 0);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 25px, 0);
+  }
+  75% {
+    -webkit-transform: translate3d(0, -10px, 0);
+  }
+  90% {
+    -webkit-transform: translate3d(0, 5px, 0);
+  }
+  100% {
+    -webkit-transform: none;
+  }
+}
 
 @keyframes bounce {
   0%, 60%, 75%, 90%, 100% {
@@ -209,6 +240,9 @@ footer p {
 }
 
 .bounce {
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  -webkit-animation-name: bounce;
   animation-duration: 1s;
   animation-fill-mode: both;
   animation-name: bounce;
