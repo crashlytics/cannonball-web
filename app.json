@@ -1,24 +1,23 @@
 {
-	"name": "Cannonball Web",
-	"description": "Cannonball for Web featuring an end-to-end Digits Web Demo in JavaScript and Node.",
-	"repository": "https://github.com/twitterdev/cannonball-web",
-	"logo": "http://cannonball-web.herokuapp.com/images/cannonball-logo.png",
-	"keywords": ["node", "express", "static"],
-	"env":{
-		"DIGITS_CONSUMER_KEY":{
-			"description":"Digits API consumer key",
-			"value":"",
-			"required":true
-		},
-		"DIGITS_CONSUMER_SECRET":{
-			"description":"Digits API consumer secret",
-			"value":"",
-			"required":true
-		},
-		"GA_TRACKING_ID":{
-			"description":"Google Analytics tracking id",
-			"value":"",
-			"required":true
-		},
-	},
+  "name": "Cannonball Web",
+  "description": "Cannonball for Web featuring an end-to-end Digits Web Demo in JavaScript and Node.",
+  "logo": "https://raw.githubusercontent.com/twitterdev/cannonball-web/master/public/images/cannonball-logo.png",
+  "keywords": ["cannonball", "digits", "fabric"],
+  "env": {
+    "DIGITS_CONSUMER_KEY": {
+      "description": "Digits API consumer key",
+      "value": "",
+      "required": true
+    },
+    "DIGITS_CONSUMER_SECRET": {
+      "description": "Digits API consumer secret",
+      "value": "",
+      "required": true
+    },
+    "GA_TRACKING_ID": {
+      "description": "Google Analytics tracking id",
+      "value": "",
+      "required": false
+    }
+  }
 }
