@@ -38,7 +38,12 @@ You can then go to [http://localhost:3000](http://localhost:3000) in your browse
 
 ## Heroku
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+Assuming you have a [Heroku](https://heroku.com/) account, you can easily deploy this sample online.
+
+1. [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+2. Enter your Digits API Key, Secret, and (optionally) the Google Analytics Tracking ID. These values will be stored in your Heroku instance as environment variables.
+3. Click on `View` once the setup is complete and take note of the URL.
+4. Navigate to your Digits dashboard on [Fabric](https://fabric.io) and set the `Callback URL` to the URL from the previous step.
 
 ## Contributors
 
