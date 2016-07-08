@@ -1,8 +1,6 @@
 {
   "name": "Cannonball Web",
   "description": "Cannonball for Web featuring an end-to-end Digits Web Demo in JavaScript and Node.",
-  "repository": "https://github.com/twitterdev/cannonball-web",
-  "logo": "https://github.com/twitterdev/cannonball-web/blob/master/public/images/cannonball-logo.png",
   "keywords": ["cannonball", "digits", "fabric"],
   "env": {
     "DIGITS_CONSUMER_KEY": {
