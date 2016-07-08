@@ -4,6 +4,7 @@
 	"repository": "https://github.com/twitterdev/cannonball-web",
 	"logo": "http://cannonball-web.herokuapp.com/images/cannonball-logo.png",
 	"keywords": [
+		"cannonball",
 		"digits",
 		"fabric"
 	],
