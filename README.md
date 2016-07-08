@@ -36,6 +36,10 @@ npm start
 
 You can then go to [http://localhost:3000](http://localhost:3000) in your browser.
 
+## Heroku
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
 ## Contributors
 
 * [Romain Huet](https://twitter.com/romainhuet)
