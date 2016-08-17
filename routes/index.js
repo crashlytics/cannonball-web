@@ -10,6 +10,7 @@ var fs = require('fs');
 var nconf = require('nconf');
 var url = require('url');
 var request = require('request');
+var authorization = require('auth-header');
 
 /**
  * GET Cannonball home page.
@@ -30,8 +31,17 @@ router.post('/digits', function (req, res) {
   var verified = true;
   var messages = [];
 
+  // Get authorization header. 
+  var auth = authorization.parse(credentials);
+
+  // OAuth authentication not provided. 
+  if (auth.scheme != 'OAuth') {
+      verified = false;
+      messages.push('Invalid auth type.');
+  }
+
   // Verify the OAuth consumer key.
-  if (credentials.indexOf('oauth_consumer_key="' + nconf.get('DIGITS_CONSUMER_KEY') + '"') == -1) {
+  if (auth.params.oauth_consumer_key != nconf.get('DIGITS_CONSUMER_KEY')) {
     verified = false;
     messages.push('The Digits API key does not match.');
   }
