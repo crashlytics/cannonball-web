@@ -18,17 +18,17 @@
         console.log('Digits failed to initialize.');
       });
 
-    // Set a click event listener on the Digits button.
-    $('.digits-button').click(onLoginButtonClick);
+    /* Embed the Digits widget. */
+    Digits.embed({
+      container: '.my-digits-container',
+      theme: {
+        accent: '00a69b',
+        border: '00a69b'
+      }
+    })
+      .done(onLogin)
+      .fail(onLoginFailure);
   });
-
-  /**
-   * Launch the Digits login flow.
-   */
-  function onLoginButtonClick(event) {
-    console.log('Digits login started.');
-    Digits.logIn().done(onLogin).fail(onLoginFailure);
-  }
 
   /**
    * Handle the login once the user has completed the sign in with Digits.
@@ -39,7 +39,6 @@
     console.log('Digits login succeeded.');
     var oAuthHeaders = parseOAuthHeaders(loginResponse.oauth_echo_headers);
 
-    setDigitsButton('Signing In…');
     $.ajax({
       type: 'POST',
       url: '/digits',
@@ -53,7 +52,6 @@
    */
   function onLoginFailure(loginResponse) {
     console.log('Digits login failed.');
-    setDigitsButton('Sign In with Phone');
   }
 
   /**
@@ -82,12 +80,10 @@
   }
 
   // Set the Digits button label (and make sure it is not disabled).
-  function setDigitsButton(text) {
-    $('.digits-button').text(text).removeAttr('disabled');
+  function setDigitsNumber(text) {
+    $('.my-digits-container').html(
+      '<div class="digits-number">' + text + '</div>'
+    );
   }
 
-  // Set the Digits phone number (and disable the button).
-  function setDigitsNumber(phoneNumber) {
-    $('.digits-button').text(phoneNumber).attr('disabled', 'disabled');
-  }
 })();

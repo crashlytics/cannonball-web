@@ -36,10 +36,6 @@ main {
   background-size: 586px 640px;
 }
 
-header {
-  padding-top: 30px;
-}
-
 h1 {
   margin: 10px 0 20px;
   font-size: 24px;
@@ -47,17 +43,17 @@ h1 {
 
 h1 a {
   display: block;
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   margin: 0 auto;
   background: url(/images/cannonball-logo.png) top center no-repeat;
-  background-size: 200px 200px;
+  background-size: 150px 150px;
   text-indent: -9999px;
   font-size: 0;
 }
 
 h2 {
-  margin: 10px 10px 20px;
+  margin: 0px 10px 20px;
   font-family: "Gotham-Medium", "Helvetica Neue", Helvetica, sans-serif;
   font-size: 18px;
   font-weight: 500;
@@ -71,9 +67,13 @@ h2 {
   width: 40%;
 }
 
-.digits-button {
+.cannonball h1 {
+  margin: 0;
+}
+
+.digits-number {
   width: 320px;
-  margin: 30px auto 0;
+  margin: 30px auto;
   font-family: "Gotham-Medium", "Helvetica Neue", Helvetica, sans-serif;
   font-size: 24px;
   font-weight: 500;
@@ -82,34 +82,22 @@ h2 {
   padding: 15px 20px 15px 60px;
   border: 3px solid #00a69b;
   border-radius: 5px;
-  cursor: pointer;
   background: url(/images/digits-icon.png) 20px center no-repeat;
   background-size: 30px 35px;
   transition: box-shadow 0.3s;
 }
 
-.digits-button:not(:disabled):hover {
+.digits-number:not(:disabled):hover {
   box-shadow: 0 0 5px #00a69b;
 }
 
-.digits-button:focus,
-.digits-button:active {
-  outline: none;
-  border: 3px solid #00a69b;
-}
-
-.digits-phone-number.shown {
-  opacity: 1;
-}
-
 .digits-note {
-  margin-top: 20px;
   font-size: 13px;
   line-height: 16px;
 }
 
 .stores {
-  margin-top: 45px;
+  margin-top: 16px;
   font-size: 0;
 }
 
@@ -288,8 +276,9 @@ footer p a {
     margin: 20px 0;
   }
 
-  .digits-button {
+  .digits-number {
     margin: auto;
+    width: auto;
   }
 
   .twitter {
