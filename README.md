@@ -10,15 +10,15 @@ Cannonball is a canonical sample iOS and Android app to demonstrate how to use [
 
 Cannonball uses many of the features available in Fabric, including [Crashlytics](https://fabric.io/kits/crashlytics), [Answers](https://answers.io/), Sign In with Phone Number via [Digits](https://fabric.io/kits/digits), embedded Tweet timelines with the [Twitter Kit](https://fabric.io/kits/twitterkit) as well as the Tweet Composer to share on Twitter, and finally Native Ads from [MoPub](https://fabric.io/kits/mopub).
 
-Cannonball is open source, so feel free to take a look at the code of [Cannonball for iOS](https://github.com/twitterdev/cannonball-ios) and [Cannonball for Android](https://github.com/twitterdev/cannonball-android) on GitHub.
+Cannonball is open source, so feel free to take a look at the code of [Cannonball for iOS](https://github.com/crashlytics/cannonball-ios) and [Cannonball for Android](https://github.com/crashlytics/cannonball-android) on GitHub.
 
 ## Digits Highlights
 
 If you’re looking for an example of how to use Digits in your web application, there are two files in this project that are particularly interesting:
 
-* On the client, [`public/javascripts/cannonball.js`](https://github.com/twitterdev/cannonball-web/blob/master/public/javascripts/cannonball.js) contains our implementation of the Digits JavaScript SDK for the Cannonball page. It initializes the Digits SDK in the browser with the consumer key, triggers the Digits login flow when the user starts to interact with the “Sign In with Phone” button, performs a request to the backend passing the right OAuth Echo headers and eventually displays the phone number.
+* On the client, [`public/javascripts/cannonball.js`](https://github.com/crashlytics/cannonball-web/blob/master/public/javascripts/cannonball.js) contains our implementation of the Digits JavaScript SDK for the Cannonball page. It initializes the Digits SDK in the browser with the consumer key, triggers the Digits login flow when the user starts to interact with the “Sign In with Phone” button, performs a request to the backend passing the right OAuth Echo headers and eventually displays the phone number.
 
-* On the server, [`routes/index.js`](https://github.com/twitterdev/cannonball-web/blob/master/routes/index.js) is responsible for verifying the authentication and interacting with the Digits API. When the login is successful, the Digits API will return the user information, and this route file returns a JSON object back to the web page to display the verified phone number.
+* On the server, [`routes/index.js`](https://github.com/crashlytics/cannonball-web/blob/master/routes/index.js) is responsible for verifying the authentication and interacting with the Digits API. When the login is successful, the Digits API will return the user information, and this route file returns a JSON object back to the web page to display the verified phone number.
 
 Note: In this demo, we simply display on the page the phone number returned over JSON — but for your application, you would most likely store the Digits user ID and verified phone number in your database, either for the core user identity or to enrich an existing profile.
 
@@ -51,6 +51,6 @@ Assuming you have a [Heroku](https://heroku.com/) account, you can easily deploy
 
 ## License
 
-Copyright 2015 Twitter, Inc. and contributors.
+Copyright 2017 Google, Inc. and contributors.
 
 Licensed under the Apache License, Version 2.0: http://www.apache.org/licenses/LICENSE-2.0
